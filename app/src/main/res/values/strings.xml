@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">TV Chefs Quiz</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="name">Name</string>
+    <string name="quizTitle">How well do you know English TV Chefs, take this Quiz and you\'ll know!</string>
+
+
+    <string name="quiz1">Q1: TV chef with an abiding interest in football is Gordon Ramsay. Well known for his swearing, and one of the most successful celebrity chefs ever, which ones are his series? (there are more than one good answer)</string>
+
+    <string name="q1a">Kitchen Confidential</string>
+    <string name="q1b">The F Word</string>
+    <string name="q1c">The Naked Chef</string>
+    <string name="q1d">Hell\'s Kitchen</string> //*
+
+    <string name="quiz2">Q2: Which celebrity chefs have Michelin-starred restaurant? (there are more than one good answer) </string>
+
+    <string name="q2a">Gordon Ramsay</string>  //*
+    <string name="q2b">Heston Blumenthal</string>  //*
+    <string name="q2c">Hugh Fearnley-Whittingstall</string>
+    <string name="q2d">Nigella Lawson</string>
+
+    <string name="quiz3">Q3: TV chef and writer Hugh Fearnley-Whittingstall has presented his popular shows from which charming location?</string>
+
+    <string name="q3a">The Hollow</string>
+    <string name="q3b">River Cottage</string>  //*
+    <string name="q3c">The Rose Garden</string>
+    <string name="q3d">Fearnley House</string>
+
+    <string name="quiz4">Q4: Nigella Lawson is a prolific writer. Starting her career in journalism, she then turned to presenting her own cookery programmes on television, which have also met with acclaim. Do you know the name of her first series?</string>
+
+    <string name="q4a">Nigella Eats</string>
+    <string name="q4b">Nigella Bites</string>  //*
+    <string name="q4c">Nigella Cooks</string>
+    <string name="q4d">Nigella Bakes</string>
+
+
+    <string name="quiz5">Q5: Which celebrity chef, born in 1975, is known as: The Naked Chef?</string>
+
+    <string name="q5a">Keith Floyd</string>
+    <string name="q5b">Nigel Slater</string>
+    <string name="q5c">Jamie Oliver</string> //*
+    <string name="q5d">Heston Blumenthal</string>
+
+    <string name="quiz6">Q6: Which celebrity chef\'s iconic main course is: Beef Wellington?</string>
+
+    <string name="q6a">Nigella Lawson</string>
+    <string name="q6b">Gordon Ramsay</string>  //*
+    <string name="q6c">Jamie Oliver</string>
+    <string name="q6d">Heston Blumenthal</string>
+
+
+
+    <string name="submit_order">Submit answers</string>
+</resources>

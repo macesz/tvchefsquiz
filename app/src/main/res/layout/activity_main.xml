@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_main"
+    tools:context="com.example.android.tvchefsquiz.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            style="@style/textViewQuiz"
+            android:text="@string/quizTitle" />
+
+        <EditText
+            android:id="@+id/name_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:inputType="textCapWords"
+            android:singleLine="true"
+            android:selectAllOnFocus="true" />
+
+        <TextView
+            style="@style/textViewQuestion"
+            android:text="@string/quiz1" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:text="@string/q1a"
+            android:textSize="16sp"/>
+
+        <CheckBox
+            style="@style/checkBox"
+            android:id="@+id/quiz1B"
+            android:text="@string/q1b"/>
+
+        <CheckBox
+            style="@style/checkBox"
+            android:text="@string/q1c"/>
+
+        <CheckBox
+            style="@style/checkBox"
+            android:id="@+id/quiz1D"
+            android:text="@string/q1d"/>
+
+        <TextView
+            style="@style/textViewQuestion"
+            android:text="@string/quiz2"/>
+
+        <CheckBox
+            style="@style/checkBox"
+            android:id="@+id/quiz2A"
+            android:text="@string/q2a"/>
+
+        <CheckBox
+            style="@style/checkBox"
+            android:id="@+id/quiz2B"
+            android:text="@string/q2b"/>
+
+        <CheckBox
+            style="@style/checkBox"
+            android:id="@+id/quiz2C"
+            android:text="@string/q2c"/>
+
+        <CheckBox
+            style="@style/checkBox"
+            android:id="@+id/quiz2D"
+            android:text="@string/q2d"/>
+
+        <TextView
+            style="@style/textViewQuestion"
+            android:text="@string/quiz3"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q3a"
+                android:textAppearance="?android:textAppearanceMedium" />
+            <RadioButton
+                android:id="@+id/answer_q3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q3b"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q3c"
+                android:textAppearance="?android:textAppearanceMedium" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q3d"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+        </RadioGroup>
+
+        <TextView
+            style="@style/textViewQuestion"
+            android:text="@string/quiz4"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q4a"
+                android:textAppearance="?android:textAppearanceMedium" />
+            <RadioButton
+                android:id="@+id/answer_q4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q4b"
+                android:textAppearance="?android:textAppearanceMedium" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q4c"
+                android:textAppearance="?android:textAppearanceMedium" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q4d"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/textViewQuestion"
+            android:text="@string/quiz5" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q5a"
+                android:textAppearance="?android:textAppearanceMedium" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q5b"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <RadioButton
+                android:id="@+id/answer_q5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q5c"
+                android:textAppearance="?android:textAppearanceMedium" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q5d"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+        </RadioGroup>
+
+        <TextView
+            style="@style/textViewQuestion"
+            android:text="@string/quiz6"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q6a"
+                android:textAppearance="?android:textAppearanceMedium" />
+            <RadioButton
+                android:id="@+id/answer_q6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q6b"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q6c"
+                android:textAppearance="?android:textAppearanceMedium" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q6d"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+        </RadioGroup>
+
+        <Button
+            style="@style/submitAnswer"
+            android:onClick="submitAnswer"
+            android:text="@string/submit_order"/>
+
+    </LinearLayout>
+</ScrollView>
