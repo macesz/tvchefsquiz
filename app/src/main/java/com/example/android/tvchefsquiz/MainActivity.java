@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,11 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
         CheckBox Q1B = (CheckBox) findViewById(R.id.quiz1B);
         boolean checkedQ1B = Q1B.isChecked();
+
         CheckBox Q1D = (CheckBox) findViewById(R.id.quiz1D);
         boolean checkedQ1D = Q1D.isChecked();
 
         CheckBox Q2A = (CheckBox) findViewById(R.id.quiz2A);
         boolean checkedQ2A = Q2A.isChecked();
+
         CheckBox Q2B = (CheckBox) findViewById(R.id.quiz2B);
         boolean checkedQ2B = Q2B.isChecked();
 
@@ -92,4 +95,36 @@ public class MainActivity extends AppCompatActivity {
             sum = 0;
         }
     }
+
+    public void resetButton(View view){
+
+        CheckBox Q1A = (CheckBox) findViewById(R.id.quiz1A);
+        Q1A.setChecked(false);
+        CheckBox Q1B = (CheckBox) findViewById(R.id.quiz1B);
+        Q1B.setChecked(false);
+        CheckBox Q1C = (CheckBox) findViewById(R.id.quiz1C);
+        Q1C.setChecked(false);
+        CheckBox Q1D = (CheckBox) findViewById(R.id.quiz1D);
+        Q1D.setChecked(false);
+
+        CheckBox Q2A = (CheckBox) findViewById(R.id.quiz2A);
+        Q2A.setChecked(false);
+        CheckBox Q2B = (CheckBox) findViewById(R.id.quiz2B);
+        Q2B.setChecked(false);
+        CheckBox Q2C = (CheckBox) findViewById(R.id.quiz2C);
+        Q2C.setChecked(false);
+        CheckBox Q2D = (CheckBox) findViewById(R.id.quiz2D);
+        Q2D.setChecked(false);
+
+
+        RadioGroup answerQuiz3 = (RadioGroup) findViewById(R.id.radioButtonQ3);
+        answerQuiz3.clearCheck();
+        RadioGroup answerQuiz4 = (RadioGroup) findViewById(R.id.radioButtonQ4);
+        answerQuiz4.clearCheck();
+        RadioGroup answerQuiz5 = (RadioGroup) findViewById(R.id.radioButtonQ5);
+        answerQuiz5.clearCheck();
+        RadioGroup answerQuiz6 = (RadioGroup) findViewById(R.id.radioButtonQ6);
+        answerQuiz6.clearCheck();
+    }
+
 }

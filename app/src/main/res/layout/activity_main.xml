@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
@@ -17,13 +17,33 @@
             style="@style/textViewQuiz"
             android:text="@string/quizTitle" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/imageChefs"
+                android:src="@drawable/gordon"/>
+            <ImageView
+                style="@style/imageChefs"
+                android:src="@drawable/nigella"/>
+            <ImageView
+                style="@style/imageChefs"
+                android:src="@drawable/hugh"/>
+            <ImageView
+                style="@style/imageChefs"
+                android:src="@drawable/heston"/>
+        </LinearLayout>
+
         <EditText
             android:id="@+id/name_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name"
             android:inputType="textCapWords"
-            android:singleLine="true"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:selectAllOnFocus="true" />
 
         <TextView
@@ -31,11 +51,9 @@
             android:text="@string/quiz1" />
 
         <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
+            style="@style/checkBox"
             android:text="@string/q1a"
-            android:textSize="16sp"/>
+            android:id="@+id/quiz1A"/>
 
         <CheckBox
             style="@style/checkBox"
@@ -44,6 +62,7 @@
 
         <CheckBox
             style="@style/checkBox"
+            android:id="@+id/quiz1C"
             android:text="@string/q1c"/>
 
         <CheckBox
@@ -79,7 +98,12 @@
             style="@style/textViewQuestion"
             android:text="@string/quiz3"/>
 
+        <ImageView
+            style="@style/imageQuiz"
+            android:src="@drawable/river"/>
+
         <RadioGroup
+            android:id="@+id/radioButtonQ3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -94,7 +118,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/q3b"
                 android:textAppearance="?android:textAppearanceMedium" />
-
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -112,7 +135,13 @@
             style="@style/textViewQuestion"
             android:text="@string/quiz4"/>
 
+        <ImageView
+            style="@style/imageQuiz"
+            android:src="@drawable/nigellabites"
+            android:adjustViewBounds="true"/>
+
         <RadioGroup
+            android:id="@+id/radioButtonQ4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -144,6 +173,7 @@
             android:text="@string/quiz5" />
 
         <RadioGroup
+            android:id="@+id/radioButtonQ5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -157,7 +187,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/q5b"
                 android:textAppearance="?android:textAppearanceMedium" />
-
             <RadioButton
                 android:id="@+id/answer_q5"
                 android:layout_width="wrap_content"
@@ -176,7 +205,12 @@
             style="@style/textViewQuestion"
             android:text="@string/quiz6"/>
 
+        <ImageView
+            style="@style/imageQuiz"
+            android:src="@drawable/wellington"/>
+
         <RadioGroup
+            android:id="@+id/radioButtonQ6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -202,13 +236,17 @@
                 android:layout_height="wrap_content"
                 android:text="@string/q6d"
                 android:textAppearance="?android:textAppearanceMedium" />
-
         </RadioGroup>
 
         <Button
             style="@style/submitAnswer"
             android:onClick="submitAnswer"
             android:text="@string/submit_order"/>
+
+        <Button
+            style="@style/submitAnswer"
+            android:onClick="resetButton"
+            android:text="@string/reset"/>
 
     </LinearLayout>
 </ScrollView>
