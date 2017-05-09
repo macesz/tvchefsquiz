@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
     /**
      * This method is called when the order button is clicked.
      * Count the number of correct answers.
@@ -30,27 +29,39 @@ public class MainActivity extends AppCompatActivity {
 
         int sum = 0;
 
-        CheckBox Q1B = (CheckBox) findViewById(R.id.quiz1B);
-        boolean checkedQ1B = Q1B.isChecked();
+        boolean checkedQ1A = ((CheckBox) findViewById(R.id.quiz1A)).isChecked();
 
-        CheckBox Q1D = (CheckBox) findViewById(R.id.quiz1D);
-        boolean checkedQ1D = Q1D.isChecked();
+        boolean checkedQ1B = ((CheckBox) findViewById(R.id.quiz1B)).isChecked();
 
-        CheckBox Q2A = (CheckBox) findViewById(R.id.quiz2A);
-        boolean checkedQ2A = Q2A.isChecked();
+        boolean checkedQ1C = ((CheckBox) findViewById(R.id.quiz1C)).isChecked();
 
-        CheckBox Q2B = (CheckBox) findViewById(R.id.quiz2B);
-        boolean checkedQ2B = Q2B.isChecked();
+        boolean checkedQ1D = ((CheckBox) findViewById(R.id.quiz1D)).isChecked();
 
+        boolean checkedQ2A = ((CheckBox) findViewById(R.id.quiz2A)).isChecked();
+
+        boolean checkedQ2B = ((CheckBox) findViewById(R.id.quiz2B)).isChecked();
+
+        boolean checkedQ2C = ((CheckBox) findViewById(R.id.quiz2C)).isChecked();
+
+        boolean checkedQ2D = ((CheckBox) findViewById(R.id.quiz2D)).isChecked();
 
         RadioButton answerQuiz3 = (RadioButton) findViewById(R.id.answer_q3);
         RadioButton answerQuiz4 = (RadioButton) findViewById(R.id.answer_q4);
         RadioButton answerQuiz5 = (RadioButton) findViewById(R.id.answer_q5);
         RadioButton answerQuiz6 = (RadioButton) findViewById(R.id.answer_q6);
 
+        if (checkedQ1A) {
+            sum--;
+        }
+
         if (checkedQ1B) {
             sum++;
         }
+
+        if (checkedQ1C) {
+            sum--;
+        }
+
         if (checkedQ1D) {
             sum++;
         }
@@ -58,16 +69,28 @@ public class MainActivity extends AppCompatActivity {
         if (checkedQ2A) {
             sum++;
         }
+
         if (checkedQ2B) {
             sum++;
         }
 
+        if (checkedQ2C) {
+            sum--;
+        }
+
+        if (checkedQ2D) {
+            sum--;
+        }
+
+
         if (answerQuiz3.isChecked()) {
             sum++;
         }
+
         if (answerQuiz4.isChecked()) {
             sum++;
         }
+
         if (answerQuiz5.isChecked()) {
             sum++;
         }
@@ -76,24 +99,25 @@ public class MainActivity extends AppCompatActivity {
             sum++;
         }
 
+        if (sum<0) {
+            sum = 0;
+        }
+
         /**
          * Gives different message based on the score, with the player name.
          */
 
-        if (sum <= 3) {
-            Toast.makeText(this, "[" + sum + " point] Dear " + playerName + ", You have never seen any TV Cooking show", Toast.LENGTH_LONG).show();
-            sum = 0;
+        if (sum >= 7) {
+            Toast.makeText(this, "[" + sum + " point] Dear " + playerName + ", You are a real foodie! You know a lot about Cooking series and you also have a good taste of it!", Toast.LENGTH_LONG).show();
         }
 
         if (sum >= 3 && sum <= 6) {
             Toast.makeText(this, "[" + sum + " point] Dear " + playerName + ", maybe you accidentally watched some show, but you need some more... ", Toast.LENGTH_LONG).show();
-            sum = 0;
         }
+        else {
+            Toast.makeText(this, "[" + sum + " point] Dear " + playerName + ", You have never seen any TV Cooking show", Toast.LENGTH_LONG).show();
+      }
 
-        if (sum >= 7) {
-            Toast.makeText(this, "[" + sum + " point] Dear " + playerName + ", You are a real foodie! You know a lot about Cooking series and you also have a good taste of it!", Toast.LENGTH_LONG).show();
-            sum = 0;
-        }
     }
 
     public void resetButton(View view){
