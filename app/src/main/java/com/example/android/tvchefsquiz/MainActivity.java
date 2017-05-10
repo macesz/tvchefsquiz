@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         EditText name = (EditText) findViewById(R.id.name_field);
         String playerName = name.getText().toString();
 
+        EditText answer = (EditText) findViewById(R.id.answer_field);
+        String answer_text = answer.getText().toString();
+
         int sum = 0;
 
         boolean checkedQ1A = ((CheckBox) findViewById(R.id.quiz1A)).isChecked();
@@ -50,39 +53,6 @@ public class MainActivity extends AppCompatActivity {
         RadioButton answerQuiz5 = (RadioButton) findViewById(R.id.answer_q5);
         RadioButton answerQuiz6 = (RadioButton) findViewById(R.id.answer_q6);
 
-        if (checkedQ1A) {
-            sum--;
-        }
-
-        if (checkedQ1B) {
-            sum++;
-        }
-
-        if (checkedQ1C) {
-            sum--;
-        }
-
-        if (checkedQ1D) {
-            sum++;
-        }
-
-        if (checkedQ2A) {
-            sum++;
-        }
-
-        if (checkedQ2B) {
-            sum++;
-        }
-
-        if (checkedQ2C) {
-            sum--;
-        }
-
-        if (checkedQ2D) {
-            sum--;
-        }
-
-
         if (answerQuiz3.isChecked()) {
             sum++;
         }
@@ -99,6 +69,22 @@ public class MainActivity extends AppCompatActivity {
             sum++;
         }
 
+        if (!checkedQ1A && checkedQ1B && !checkedQ1C && checkedQ1D) {
+            // only in this case, the user scores a point
+            sum++;
+        }
+
+        if (checkedQ2A && checkedQ2B && !checkedQ2C && !checkedQ2D) {
+            // only in this case, the user scores a point
+            sum++;
+        }
+
+        String correct_answer = "5";
+        if(correct_answer.equalsIgnoreCase(answer_text))
+        {
+            sum++;
+        }
+
         if (sum<0) {
             sum = 0;
         }
@@ -107,17 +93,16 @@ public class MainActivity extends AppCompatActivity {
          * Gives different message based on the score, with the player name.
          */
 
-        if (sum >= 7) {
+        if (sum >= 6) {
             Toast.makeText(this, "[" + sum + " point] Dear " + playerName + ", You are a real foodie! You know a lot about Cooking series and you also have a good taste of it!", Toast.LENGTH_LONG).show();
         }
 
-        if (sum >= 3 && sum <= 6) {
+        if (sum >= 3 && sum <= 5) {
             Toast.makeText(this, "[" + sum + " point] Dear " + playerName + ", maybe you accidentally watched some show, but you need some more... ", Toast.LENGTH_LONG).show();
         }
         else {
             Toast.makeText(this, "[" + sum + " point] Dear " + playerName + ", You have never seen any TV Cooking show", Toast.LENGTH_LONG).show();
       }
-
     }
 
     public void resetButton(View view){
@@ -150,5 +135,4 @@ public class MainActivity extends AppCompatActivity {
         RadioGroup answerQuiz6 = (RadioGroup) findViewById(R.id.radioButtonQ6);
         answerQuiz6.clearCheck();
     }
-
 }

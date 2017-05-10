@@ -238,6 +238,19 @@
                 android:textAppearance="?android:textAppearanceMedium" />
         </RadioGroup>
 
+        <TextView
+            style="@style/textViewQuestion"
+            android:text="@string/quiz7" />
+        <EditText
+            android:id="@+id/answer_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="your answer"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:selectAllOnFocus="true" />
+
         <Button
             style="@style/submitAnswer"
             android:onClick="submitAnswer"
